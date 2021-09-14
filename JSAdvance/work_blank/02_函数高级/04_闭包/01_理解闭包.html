@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>01_理解闭包</title>
+    <meta charset="UTF-8">
+    <title>01_理解闭包</title>
 </head>
 <body>
 <!--
@@ -18,6 +18,17 @@
   * 内部函数引用了外部函数的数据(变量/函数)
 -->
 <script type="text/javascript">
+
+    function fn1() {
+        var a = 2;
+        var b = '123';
+        function fn2() { // 执行函数定义就会产生闭包(不用调用内部函数)[但是现在要调用] 。调用外部函数fn1后，执行fn2函数定义
+            console.log(a);
+        }
+        fn2();
+        // return fn2;
+    }
+    fn1();
 
 </script>
 </body>
